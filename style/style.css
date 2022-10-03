@@ -1,5 +1,13 @@
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
 }
 button {
   cursor: pointer;
@@ -25,7 +33,7 @@ button {
   top: 60px;
   left: 40px;
 }
-.header__logo h1 {
+.logo-up {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -37,7 +45,7 @@ button {
   margin-bottom: 10px;
   white-space: nowrap;
 }
-.header__logo h2 {
+.logo-down {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -216,7 +224,7 @@ button {
   border: 2px solid #f1cdb3;
   border-radius: 100px;
 }
-.name__button p {
+.name__button .button__text {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -351,19 +359,20 @@ button {
   border-radius: 9px;
   width: 349px;
   height: 43px;
-  vertical-align: middle;
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
-  align-items: center;
+
   letter-spacing: 0.06em;
   color: #545454;
   margin-bottom: 20px;
 }
 .text__img {
-  margin: 10px 15px 0px 15px;
+  margin: 0px 15px 0px 0px;
+  padding-top: 10px;
+  padding-left: 15px;
 }
 .address__footer {
   font-family: "Arial";
@@ -375,13 +384,16 @@ button {
   align-items: center;
   color: #b2b2b2;
 }
-.footer {
-  position: relative;
-  height: 350px;
+.footer-background {
   background: url(noise_lines_transparent@2X.png),
     radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%)
       /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
     #211f20;
+}
+.footer {
+  position: relative;
+  height: 350px;
+
   display: flex;
 }
 .footer .address__img {
