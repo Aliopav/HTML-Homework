@@ -105,3 +105,14 @@
   letter-spacing: 0.06em;
   color: #292929;
 }
+.our-friends__navigation {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  width: 340px;
+  height: 52px;
+}
+.navigation__button {
+  border: none;
+  background: none;
+}
