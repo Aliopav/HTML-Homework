@@ -52,3 +52,56 @@
 .list-item__link:hover {
   text-decoration: underline 2px #f1cdb3;
 }
+.our-friends__upname {
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 45px;
+  width: 460px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 130%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.our-friends__main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 45px 40px 45px 40px;
+}
+.main__pets-card-prewie {
+  margin-bottom: 30px;
+}
+.pets-card-prewie__img {
+  margin-bottom: 30px;
+}
+.pets-card-prewie__name {
+  margin-bottom: 30px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.42rem;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.pets-card-prewie__button {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  height: 52px;
+  width: 187px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.21rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
