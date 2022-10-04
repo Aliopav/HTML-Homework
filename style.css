@@ -7,7 +7,7 @@
   display: flex;
   margin: 30px 0 30px 40px;
 }
-.logo-up {
+.header-up {
   margin-bottom: 10px;
   font-family: "Georgia";
   font-style: normal;
@@ -18,7 +18,7 @@
   letter-spacing: 0.06em;
   color: #545454;
 }
-.logo-down {
+.header-down {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
@@ -30,15 +30,25 @@
 }
 .header__nav {
   position: absolute;
-  right: 40px;
+  right: 0px;
   top: 16px;
 }
 .nav__list {
   display: flex;
+  justify-content: space-around;
   right: 0;
-  width: 443px;
-  height: 27px;
   list-style-type: none;
 }
 .list-item__link {
+  text-decoration: none;
+  margin-right: 35px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  color: #545454;
+}
+.list-item__link:hover {
+  text-decoration: underline 2px #f1cdb3;
 }
