@@ -23,18 +23,16 @@
           <nav class="header__nav nav">
             <ul class="nav__list">
               <li class="nav__list-item list-item">
-                <a href="" class="list-item__link" checked
-                  ><p>About the shelter</p></a
-                >
+                <a href="" class="list-item__link" checked>About the shelter</a>
               </li>
               <li class="nav__list-item list-item">
-                <a href="" class="list-item__link"><p>Our pets</p></a>
+                <a href="" class="list-item__link">Our pets</a>
               </li>
               <li class="nav__list-item list-item">
-                <a href="" class="list-item__link"><p>Help the shelter</p></a>
+                <a href="" class="list-item__link">Help the shelter</a>
               </li>
               <li class="nav__list-item list-item">
-                <a href="" class="list-item__link"><p>Contacts</p></a>
+                <a href="" class="list-item__link">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -50,8 +48,8 @@
         </section>
       </div>
     </div>
-    <section class="about-the-shelter">
-      <div class="wrapper">
+    <section>
+      <div class="wrapper about-the-shelter">
         <img
           src="./assets/image/about-pets.jpg"
           alt=""
@@ -132,7 +130,9 @@
             />
           </button>
         </main>
-        <button class="main__button-rest"><p>Get to know the rest</p></button>
+        <button class="main__button-rest">
+          <p class="main__button-rest-text">Get to know the rest</p>
+        </button>
       </div>
     </section>
     <section class="help-shelter">
@@ -145,7 +145,7 @@
               alt=""
               class="list-item__img"
             />
-            <p>Pet food</p>
+            <p class="list-item__text">Pet food</p>
           </li>
           <li class="help-shelter__list-item list-item">
             <img
@@ -153,7 +153,7 @@
               alt=""
               class="list-item__img"
             />
-            <p>Transportation</p>
+            <p class="list-item__text">Transportation</p>
           </li>
           <li class="help-shelter__list-item list-item">
             <img
@@ -161,7 +161,7 @@
               alt=""
               class="list-item__img"
             />
-            <p>Toys</p>
+            <p class="list-item__text">Toys</p>
           </li>
           <li class="help-shelter__list-item list-item">
             <img
@@ -169,7 +169,7 @@
               alt=""
               class="list-item__img"
             />
-            <p>Bowls and cups</p>
+            <p class="list-item__text">Bowls and cups</p>
           </li>
           <li class="help-shelter__list-item list-item">
             <img
@@ -177,7 +177,7 @@
               alt=""
               class="list-item__img"
             />
-            <p>Shampoos</p>
+            <p class="list-item__text">Shampoos</p>
           </li>
         </ul>
         <ul class="help-shelter__list-down">
@@ -187,7 +187,7 @@
               alt=""
               class="list-item__img"
             />
-            <p>Vitamins</p>
+            <p class="list-item__text">Vitamins</p>
           </li>
           <li class="help-shelter__list-item list-item">
             <img
@@ -195,7 +195,7 @@
               alt=""
               class="list-item__img"
             />
-            <p>Medicines</p>
+            <p class="list-item__text">Medicines</p>
           </li>
           <li class="help-shelter__list-item list-item">
             <img
@@ -203,7 +203,7 @@
               alt=""
               class="list-item__img"
             />
-            <p>Collars / leashes</p>
+            <p class="list-item__text">Collars / leashes</p>
           </li>
           <li class="help-shelter__list-item list-item">
             <img
@@ -211,13 +211,13 @@
               alt=""
               class="list-item__img"
             />
-            <p>Sleeping areas</p>
+            <p class="list-item__text">Sleeping areas</p>
           </li>
         </ul>
       </div>
     </section>
-    <section class="credit-card">
-      <div class="wrapper">
+    <section>
+      <div class="wrapper credit-card">
         <img
           src="./assets/image/donation-dog.jpg"
           alt=""
@@ -229,13 +229,14 @@
             Name of the bank / Type of bank account
           </p>
 
-          <p class="address__text text">
+          <div class="address__text text">
             <img
               src="./assets/image/credit-card.svg"
               alt=""
               class="text__img"
-            />8380 2880 8028 8791 7435
-          </p>
+            />
+            <p class="text">8380 2880 8028 8791 7435</p>
+          </div>
           <footer class="address__footer">
             Legal information and lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed
@@ -258,10 +259,7 @@
                   class="link__img"
                 />email@shelter.com</a
               >
-              <a
-                href="tel:+13 674 567
-        75 54"
-                class="link"
+              <a href="tel:+13 674 567 75 54" class="link"
                 ><img
                   src="./assets/image/icon-phone.svg"
                   alt=""
