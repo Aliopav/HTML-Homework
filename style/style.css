@@ -33,10 +33,9 @@ button {
   bottom: 0;
   right: 40px;
   z-index: 1;
+  filter: opacity(60%);
 }
-.header__logo {
-  /* width: 184px; */
-}
+
 .logo-up {
   font-size: 2.5rem;
   line-height: 110%;
@@ -79,12 +78,10 @@ button {
 }
 
 .need-house {
-  padding-left: 40px;
-  padding-bottom: 243px;
-  margin-top: 223px;
+  padding: 223px 40px 243px 42px;
 }
 .need-house__header {
-  width: 310px;
+  width: 355px;
   font-family: "Georgia";
   font-size: 3.14rem;
   line-height: 130%;
@@ -190,11 +187,10 @@ button {
 }
 .main__button-rest {
   display: flex;
+  padding: 15px 45px 15px 45px;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 261px;
-  height: 52px;
   background: #f1cdb3;
   border-radius: 100px;
   border: none;
@@ -277,16 +273,16 @@ button {
 .address__text {
   display: flex;
   align-items: center;
-  height: 45px;
+  max-width: 405px;
+  margin-bottom: 20px;
+  width: 110%;
   background: #f1cdb3;
   border-radius: 9px;
-  margin-bottom: 20px;
 }
 .text__img {
-  margin-right: 15px;
-  padding-left: 15px;
 }
 .credit-card .text {
+  padding: 10px 15px 10px 15px;
   font-size: 1.42rem;
   line-height: 115%;
   vertical-align: middle;
@@ -319,7 +315,7 @@ button {
 }
 
 .footer .footer__address {
-  width: 302px;
+  width: 330px;
   margin: 56px 100px 0 40px;
   z-index: 5;
 }
