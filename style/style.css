@@ -16,6 +16,9 @@
 button {
   cursor: pointer;
 }
+button:hover {
+  background: #f1cdb3;
+}
 .header-need-house {
   background: url(noise_lines_transparent@2X.png),
     radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%)
@@ -29,11 +32,12 @@ button {
 }
 .header__img {
   position: absolute;
-  width: 45vw;
+  width: 40vw;
   bottom: 0;
   right: 40px;
   z-index: 1;
-  filter: opacity(60%);
+  /* filter: drop-shadow(10px 0px 5px black); */
+  filter: contrast(80%);
 }
 
 .logo-up {
@@ -109,6 +113,7 @@ button {
 .about-the-shelter {
   display: flex;
   padding: 80px 40px 100px 40px;
+  background: #ffffff;
 }
 .about-the-shelter__image {
   height: 10%;
@@ -133,6 +138,7 @@ button {
   margin-bottom: 25px;
 }
 .our-friends {
+  background: #f6f6f6;
 }
 .our-friends__header {
   margin: 0 auto;
@@ -148,9 +154,13 @@ button {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .main__arrow-left,
 .main__arrow-right {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
   border: none;
   background: none;
 }
@@ -203,6 +213,7 @@ button {
 }
 .help-shelter {
   margin-top: 180px;
+  background: #ffffff;
 }
 .help-shelter__header {
   margin: 0 auto;
@@ -242,6 +253,9 @@ button {
   text-align: center;
   letter-spacing: 0.06em;
   color: #545454;
+}
+.section-credit-card {
+  background: #f6f6f6;
 }
 .credit-card {
   display: flex;
