@@ -11,11 +11,6 @@
     <div class="header-need-house">
       <div class="wrapper">
         <header class="header">
-          <img
-            src="./assets/image/start-screen-puppy.png"
-            alt=""
-            class="header__img"
-          />
           <hgroup class="header__logo">
             <h1 class="logo-up">Cozy House</h1>
             <h2 class="logo-down">Shelter for pets in Boston</h2>
@@ -38,13 +33,21 @@
           </nav>
         </header>
         <section class="need-house">
-          <h1 class="need-house__header">Not only people need a house</h1>
-          <p class="need-house__text">
-            We offer to give a chance to a little and nice puppy with an
-            extremely wide and open heart. He or she will love you more than
-            anybody else in the world, you will see!
-          </p>
-          <button class="need-house__button">Make a friend</button>
+          <hgroup class="need-house__hgroup">
+            <h1 class="need-house__header">Not only people need a house</h1>
+            <p class="need-house__text">
+              We offer to give a chance to a little and nice puppy with an
+              extremely wide and open heart. He or she will love you more than
+              anybody else in the world, you will see!
+            </p>
+            <button class="need-house__button">Make a friend</button>
+          </hgroup>
+          <picture class="need-house__picture">
+            <img
+              src="./assets/image/start-screen-puppy.png"
+              alt=""
+              class="need-house__img"
+          /></picture>
         </section>
       </div>
     </div>
@@ -54,6 +57,8 @@
           src="./assets/image/about-pets.jpg"
           alt=""
           class="about-the-shelter__image"
+          width="300px"
+          height="408px"
         />
         <hgroup class="about-the-shelter__description description">
           <h1 class="description__header">About the shelter “Cozy House”</h1>
@@ -78,7 +83,8 @@
     <section class="our-friends">
       <div class="wrapper">
         <h1 class="our-friends__header">
-          Our friends who are looking for a house
+          Our friends who <br />
+          are looking for a house
         </h1>
         <main class="our-friends__main main">
           <button class="main__arrow-left arrow-left">
@@ -86,47 +92,58 @@
               src="./assets/image/button_arrow.png"
               alt=""
               class="arrow-left__img"
+              width="52px"
+              height="52px"
             />
           </button>
-
-          <article class="main__pet-card-preview pet-card-preview">
-            <img
-              src="./assets/image/pets-katrine.jpg"
-              alt=""
-              class="pet-card-preview__img"
-            />
-            <p class="pet-card-preview__name name">Katrine</p>
-            <button class="name__button button">
-              <p class="button__text">Learn more</p>
-            </button>
-          </article>
-          <article class="main__pet-card-preview pet-card-preview">
-            <img
-              src="./assets/image/pets-jennifer.jpg"
-              alt=""
-              class="pet-card-preview__img"
-            />
-            <p class="pet-card-preview__name name">Jennifer</p>
-            <button class="name__button button">
-              <p class="button__text">Learn more</p>
-            </button>
-          </article>
-          <article class="main__pet-card-preview pet-card-preview">
-            <img
-              src="./assets/image/pets-woody.jpg"
-              alt=""
-              class="pet-card-preview__img"
-            />
-            <p class="pet-card-preview__name name">Woody</p>
-            <button class="name__button button">
-              <p class="button__text">Learn more</p>
-            </button>
-          </article>
+          <section class="main__card-section">
+            <article class="main__pet-card-preview pet-card-preview">
+              <img
+                src="./assets/image/pets-katrine.jpg"
+                alt=""
+                class="pet-card-preview__img"
+                width="270px"
+                height="270px"
+              />
+              <p class="pet-card-preview__name name">Katrine</p>
+              <button class="name__button button">
+                <p class="button__text">Learn more</p>
+              </button>
+            </article>
+            <article class="main__pet-card-preview pet-card-preview">
+              <img
+                src="./assets/image/pets-jennifer.jpg"
+                alt=""
+                class="pet-card-preview__img"
+                width="270px"
+                height="270px"
+              />
+              <p class="pet-card-preview__name name">Jennifer</p>
+              <button class="name__button button">
+                <p class="button__text">Learn more</p>
+              </button>
+            </article>
+            <article class="main__pet-card-preview pet-card-preview">
+              <img
+                src="./assets/image/pets-woody.jpg"
+                alt=""
+                class="pet-card-preview__img"
+                width="270px"
+                height="270px"
+              />
+              <p class="pet-card-preview__name name">Woody</p>
+              <button class="name__button button">
+                <p class="button__text">Learn more</p>
+              </button>
+            </article>
+          </section>
           <button class="main__arrow-right arrow-right">
             <img
               src="./assets/image/button_arrow_right.png"
               alt=""
               class="arrow-right__img"
+              width="52px"
+              height="52px"
             />
           </button>
         </main>
@@ -138,12 +155,14 @@
     <section class="help-shelter">
       <div class="wrapper">
         <h1 class="help-shelter__header">How you can help our shelter</h1>
-        <ul class="help-shelter__list-up">
+        <ul class="help-shelter__list">
           <li class="help-shelter__list-item list-item">
             <img
               src="./assets/image/icon-pet-food.svg"
               alt=""
               class="list-item__img"
+              width="60px"
+              height="60px"
             />
             <p class="list-item__text">Pet food</p>
           </li>
@@ -152,6 +171,8 @@
               src="./assets/image/icon-transportation.svg"
               alt=""
               class="list-item__img"
+              width="60px"
+              height="60px"
             />
             <p class="list-item__text">Transportation</p>
           </li>
@@ -160,6 +181,8 @@
               src="./assets/image/icon-toys.svg"
               alt=""
               class="list-item__img"
+              width="60px"
+              height="60px"
             />
             <p class="list-item__text">Toys</p>
           </li>
@@ -168,6 +191,8 @@
               src="./assets/image/icon-bowls-and-cups.svg"
               alt=""
               class="list-item__img"
+              width="60px"
+              height="60px"
             />
             <p class="list-item__text">Bowls and cups</p>
           </li>
@@ -176,16 +201,19 @@
               src="./assets/image/icon-shampoos.svg"
               alt=""
               class="list-item__img"
+              width="60px"
+              height="60px"
             />
             <p class="list-item__text">Shampoos</p>
           </li>
-        </ul>
-        <ul class="help-shelter__list-down">
+
           <li class="help-shelter__list-item list-item">
             <img
               src="./assets/image/icon-vitamins.svg"
               alt=""
               class="list-item__img"
+              width="60px"
+              height="60px"
             />
             <p class="list-item__text">Vitamins</p>
           </li>
@@ -194,6 +222,8 @@
               src="./assets/image/icon-medicines.svg"
               alt=""
               class="list-item__img"
+              width="60px"
+              height="60px"
             />
             <p class="list-item__text">Medicines</p>
           </li>
@@ -202,6 +232,8 @@
               src="./assets/image/icon-collars-leashes.svg"
               alt=""
               class="list-item__img"
+              width="60px"
+              height="60px"
             />
             <p class="list-item__text">Collars / leashes</p>
           </li>
@@ -210,6 +242,8 @@
               src="./assets/image/icon-sleeping-area.svg"
               alt=""
               class="list-item__img"
+              width="60px"
+              height="60px"
             />
             <p class="list-item__text">Sleeping areas</p>
           </li>
@@ -222,6 +256,8 @@
           src="./assets/image/donation-dog.png"
           alt=""
           class="credit-card__img"
+          width="505px"
+          height="261px"
         />
         <address class="credit-card__address address">
           <h1 class="address__header">You can also make a donation</h1>
@@ -250,13 +286,18 @@
       <div class="wrapper">
         <div class="footer">
           <address class="footer__address address">
-            <h3 class="address__header">For questions and suggestions</h3>
+            <h3 class="address__header">
+              For questions <br />
+              and suggestions
+            </h3>
             <section class="address__link link">
               <a href="mailto:email@shelter.com" class="link"
                 ><img
                   src="./assets/image/mail.svg"
                   alt=""
                   class="link__img"
+                  width="40px"
+                  height="32px"
                 />email@shelter.com</a
               >
               <a href="tel:+13 674 567 75 54" class="link"
@@ -264,28 +305,47 @@
                   src="./assets/image/icon-phone.svg"
                   alt=""
                   class="link__img"
+                  width="40px"
+                  height="32px"
                 />+13 674 567 75 54</a
               >
             </section>
           </address>
           <address class="footer__address address">
-            <h3 class="address__header">We are waiting for your visit</h3>
+            <h3 class="address__header">
+              We are waiting <br />
+              for your visit
+            </h3>
             <section class="address__map map">
               <p class="map">
-                <img src="./assets/image/pin.png" alt="" class="map__img" />1
-                Central Street, Boston (entrance from the store)
+                <img
+                  src="./assets/image/pin.png"
+                  alt=""
+                  class="map__img"
+                  width="22px"
+                  height="32px"
+                />1 Central Street, Boston <br />
+                (entrance from the store)
               </p>
               <p class="map">
-                <img src="./assets/image/pin.png" alt="" class="map__img" />18
-                South Park, London
+                <img
+                  src="./assets/image/pin.png"
+                  alt=""
+                  class="map__img"
+                  width="22px"
+                  height="32px"
+                />18 South Park, London
               </p>
             </section>
           </address>
-          <img
-            src="./assets/image/footer-puppy.png"
-            alt=""
-            class="address__img"
-          />
+          <picture class="footer__picture">
+            <img
+              src="./assets/image/footer-puppy.png"
+              alt=""
+              class="address__img"
+              width="300px"
+              height="310px"
+          /></picture>
         </div>
       </div>
     </footer>
