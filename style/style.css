@@ -28,6 +28,7 @@ button:hover {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 60px 40px 40px 40px;
 }
 
@@ -47,6 +48,10 @@ button:hover {
   align-items: center;
   letter-spacing: 0.1em;
   color: #ffffff;
+}
+.header__burger {
+  margin-left: 30px;
+  display: none;
 }
 .header__nav {
   display: flex;
@@ -163,8 +168,6 @@ button:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  overflow: hidden;
-  border: 1px solid;
 }
 .main__arrow-left {
   position: absolute;
@@ -189,14 +192,16 @@ button:hover {
 .main__card-section {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
 .main__pet-card-preview {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 60px;
+  margin: 0px 40px 60px 40px;
 }
+
 .pet-card-preview__name {
   margin-bottom: 30px;
   font-size: 1.42rem;
@@ -291,16 +296,21 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 80px 182px 100px 182px;
+  padding: 80px 20px 100px 20px;
+}
+.credit-card__img {
+  max-width: 505px;
+  width: 100%;
+  margin-right: 30px;
 }
 
 .credit-card__address {
   width: 380px;
 }
 .credit-card__address .address__header {
-  width: 332px;
   font-size: 2.5rem;
   line-height: 130%;
+  text-align: center;
   align-items: center;
   letter-spacing: 0.06em;
   color: #545454;
@@ -316,17 +326,17 @@ button:hover {
 }
 .address__text {
   display: flex;
+  /* flex-wrap: nowrap; */
   align-items: center;
   max-width: 405px;
   margin-bottom: 20px;
-  width: 110%;
+  width: 100%;
   background: #f1cdb3;
   border-radius: 9px;
 }
-.text__img {
-}
+
 .credit-card .text {
-  padding: 10px 15px 10px 15px;
+  padding: 10px 0px 10px 10px;
   font-size: 1.42rem;
   line-height: 115%;
   vertical-align: middle;
@@ -403,32 +413,80 @@ button:hover {
   margin-right: 20px;
 }
 @media (max-width: 1267px) {
-  .credit-card__img {
-    order: 1;
-    margin-top: 20px;
-  }
-
   .footer__picture {
     width: 100%;
   }
 }
+@media (max-width: 955px) {
+  .credit-card__img {
+    order: 1;
+    margin-top: 20px;
+  }
+  .main__pet-card-preview:last-child {
+    display: none;
+  }
+}
 @media (max-width: 810px) {
+  .nav__list-item:not(:last-child) {
+    margin-right: 25px;
+    margin-bottom: 43px;
+  }
   .about-the-shelter__image {
     order: 1;
     margin-top: 80px;
   }
 }
 @media (max-width: 768px) {
-  .main__card-section:last-child {
+  .header__burger {
+    display: block;
+  }
+  .nav__list {
+    position: absolute;
+    top: 248px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    background-color: #292929;
+    z-index: 2;
+    width: 80%;
+    text-align: center;
     display: none;
+  }
+  .list-item__link {
+    font-size: 1.78rem;
+  }
+  .main__pet-card-preview:nth-child(2) {
+    display: none;
+  }
+  .credit-card__img {
+    margin-right: 0;
   }
   .footer .footer__address {
     width: 100%;
   }
   .need-house__header,
   .description__header,
-  .address__header,
-  .our-friends__header {
+  .footer .address__header,
+  .credit-card__address .address__header,
+  .our-friends__header,
+  .help-shelter__header {
     font-size: 1.78rem;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    padding-left: 10px;
+  }
+
+  .main__arrow-left {
+    left: 58px;
+    top: 400px;
+  }
+  .main__arrow-right {
+    right: 58px;
+    top: 400px;
+  }
+  .credit-card .text {
+    font-size: 1rem;
   }
 }
