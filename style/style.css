@@ -28,16 +28,7 @@ button:hover {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 60px 40px 0px 40px;
-}
-.header__img {
-  position: absolute;
-  width: 40vw;
-  bottom: 0;
-  right: 40px;
-  z-index: 1;
-  /* filter: drop-shadow(10px 0px 5px black); */
-  filter: contrast(80%);
+  padding: 60px 40px 40px 40px;
 }
 
 .logo-up {
@@ -82,18 +73,22 @@ button:hover {
 }
 
 .need-house {
-  padding: 223px 40px 243px 42px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 40px 0px 42px;
+}
+.need-house__hgroup {
+  width: 460px;
+  padding: 223px 0 100px 0;
 }
 .need-house__header {
-  width: 355px;
-  font-family: "Georgia";
   font-size: 3.14rem;
   line-height: 130%;
   color: #ffffff;
   margin-bottom: 42px;
 }
 .need-house__text {
-  width: 460px;
   font-family: "Arial";
   font-size: 15px;
   line-height: 160%;
@@ -110,18 +105,30 @@ button:hover {
   cursor: pointer;
   border: none;
 }
+.need-house__picture {
+  display: flex;
+  align-items: flex-end;
+}
+.need-house__img {
+  position: relative;
+  bottom: -1px;
+  max-width: 698px;
+  width: 55vw;
+  z-index: 1;
+}
 .about-the-shelter {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 80px 40px 100px 40px;
   background: #ffffff;
 }
 .about-the-shelter__image {
-  height: 10%;
-  padding-left: 175px;
-  margin-right: 120px;
 }
 .about-the-shelter__description {
-  width: 430px;
+  text-align: center;
+  padding: 0px 15px 0px 15px;
+  max-width: 430px;
 }
 .description__header {
   font-size: 2.5rem;
@@ -144,7 +151,6 @@ button:hover {
 .our-friends__header {
   margin: 0 auto;
   margin-bottom: 60px;
-  width: 400px;
   font-size: 2.5rem;
   line-height: 130%;
   text-align: center;
@@ -152,18 +158,37 @@ button:hover {
   color: #545454;
 }
 .our-friends__main {
+  position: relative;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
+  border: 1px solid;
 }
-.main__arrow-left,
-.main__arrow-right {
+.main__arrow-left {
+  position: absolute;
+  left: 0px;
+  top: 192px;
   height: 52px;
   width: 52px;
   border-radius: 50%;
   border: none;
   background: none;
+}
+.main__arrow-right {
+  position: absolute;
+  right: 0px;
+  top: 192px;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+}
+.main__card-section {
+  display: flex;
+  justify-content: space-around;
 }
 
 .main__pet-card-preview {
@@ -227,22 +252,26 @@ button:hover {
   color: #545454;
   margin-bottom: 60px;
 }
-.help-shelter__list-up {
+.help-shelter__list {
+  margin: 0 auto;
   display: flex;
-  list-style-type: none;
   justify-content: space-between;
-  margin: 0px 127px 55px 127px;
-}
-.help-shelter__list-down {
-  margin: 0px 127px 55px 127px;
-  display: flex;
+  flex-wrap: wrap;
+  max-width: 1026px;
+  width: 100%;
   list-style-type: none;
-  justify-content: space-around;
 }
+
 .help-shelter .list-item {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 185px;
+  margin: 55px 0;
 }
+
 .list-item__img {
   margin: 0 auto;
   margin-bottom: 30px;
@@ -260,12 +289,12 @@ button:hover {
 }
 .credit-card {
   display: flex;
-  padding: 80px 0px 100px 182px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 80px 182px 100px 182px;
 }
-.credit-card__img {
-}
+
 .credit-card__address {
-  height: 282px;
   width: 380px;
 }
 .credit-card__address .address__header {
@@ -320,18 +349,25 @@ button:hover {
 }
 .footer {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 56px 40px 0px 40px;
+}
+.footer__picture {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .footer .address__img {
-  position: absolute;
-  bottom: 0;
-  right: 40px;
-  height: 310px;
-  width: 300px;
+  position: relative;
+  bottom: 0px;
+  right: 0px;
 }
 
 .footer .footer__address {
-  width: 330px;
-  margin: 56px 100px 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 5;
 }
 .footer .address__header {
@@ -360,13 +396,39 @@ button:hover {
   margin-bottom: 32px;
 }
 .footer .link__img {
-  width: 40px;
-  height: 32px;
   margin-bottom: 40px;
   margin-right: 20px;
 }
 .footer .map__img {
-  width: 22px;
-  height: 32px;
   margin-right: 20px;
+}
+@media (max-width: 1267px) {
+  .credit-card__img {
+    order: 1;
+    margin-top: 20px;
+  }
+
+  .footer__picture {
+    width: 100%;
+  }
+}
+@media (max-width: 810px) {
+  .about-the-shelter__image {
+    order: 1;
+    margin-top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .main__card-section:last-child {
+    display: none;
+  }
+  .footer .footer__address {
+    width: 100%;
+  }
+  .need-house__header,
+  .description__header,
+  .address__header,
+  .our-friends__header {
+    font-size: 1.78rem;
+  }
 }
