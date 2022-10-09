@@ -84,6 +84,8 @@ button:hover {
   padding: 0px 40px 0px 42px;
 }
 .need-house__hgroup {
+  display: flex;
+  flex-direction: column;
   width: 460px;
   padding: 223px 0 100px 0;
 }
@@ -118,7 +120,7 @@ button:hover {
   position: relative;
   bottom: -1px;
   max-width: 698px;
-  width: 55vw;
+  width: 49vw;
   z-index: 1;
 }
 .about-the-shelter {
@@ -143,12 +145,13 @@ button:hover {
   margin-bottom: 25px;
 }
 .description__text {
+  margin-top: 25px;
   font-family: "Arial";
   font-size: 1rem;
   line-height: 160%;
   color: #4c4c4c;
-  margin-bottom: 25px;
 }
+
 .our-friends {
   padding: 80px 0 100px 0;
   background: #f6f6f6;
@@ -169,26 +172,30 @@ button:hover {
   justify-content: space-around;
   align-items: center;
 }
+.our-friends__arrow {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 42px;
+  display: none;
+}
+.arrow__left,
+.arrow__right {
+  border: none;
+  background: none;
+}
 .main__arrow-left {
-  position: absolute;
-  left: 0px;
-  top: 192px;
-  height: 52px;
-  width: 52px;
+  margin-left: 10px;
   border-radius: 50%;
   border: none;
   background: none;
 }
 .main__arrow-right {
-  position: absolute;
-  right: 0px;
-  top: 192px;
-  height: 52px;
-  width: 52px;
+  margin-right: 10px;
   border-radius: 50%;
   border: none;
   background: none;
 }
+
 .main__card-section {
   display: flex;
   justify-content: space-around;
@@ -199,7 +206,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0px 40px 60px 40px;
+  padding: 0px 0px 60px 0px;
 }
 
 .pet-card-preview__name {
@@ -413,6 +420,9 @@ button:hover {
   margin-right: 20px;
 }
 @media (max-width: 1267px) {
+  .footer {
+    justify-content: space-around;
+  }
   .footer__picture {
     width: 100%;
   }
@@ -440,23 +450,35 @@ button:hover {
   .header__burger {
     display: block;
   }
-  .nav__list {
+  .header__nav {
     position: absolute;
     top: 248px;
     left: 50%;
     transform: translateX(-50%);
-    flex-direction: column;
     background-color: #292929;
     z-index: 2;
     width: 80%;
     text-align: center;
     display: none;
   }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+  }
   .list-item__link {
     font-size: 1.78rem;
   }
-  .main__pet-card-preview:nth-child(2) {
-    display: none;
+
+  .need-house {
+    justify-content: space-around;
+  }
+
+  .need-house__hgroup {
+    padding: 0px 0 100px 0;
+  }
+
+  .need-house__button {
+    align-self: center;
   }
   .credit-card__img {
     margin-right: 0;
@@ -473,18 +495,22 @@ button:hover {
     font-size: 1.78rem;
   }
 }
+@media (max-width: 665px) {
+  .main__pet-card-preview:nth-child(2) {
+    display: none;
+  }
+}
 @media (max-width: 400px) {
   .header {
     padding-left: 10px;
   }
 
-  .main__arrow-left {
-    left: 58px;
-    top: 400px;
+  .our-friends__arrow {
+    display: flex;
   }
+  .main__arrow-left,
   .main__arrow-right {
-    right: 58px;
-    top: 400px;
+    display: none;
   }
   .credit-card .text {
     font-size: 1rem;
