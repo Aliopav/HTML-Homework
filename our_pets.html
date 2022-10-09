@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="wrapper flex">
+    <header class="">
+      <div class="wrapper header">
         <hgroup class="header__logo">
           <h1 class="header-up">Cozy House</h1>
           <h2 class="header-down">Shelter for pets in Boston</h2>
@@ -29,6 +29,9 @@
               <a href="" class="list-item__link">Contacts</a>
             </li>
           </ul>
+          <button class="nav__burger">
+            <img src="./assets/image/Burger.png" alt="" />
+          </button>
         </nav>
       </div>
     </header>
@@ -114,32 +117,57 @@
         </main>
         <nav class="our-friends__navigation navigation">
           <button class="navigation__button">
-            <img src="./assets/image/button_paginator_inactive.png" alt="" />
+            <img
+              src="./assets/image/button_paginator_inactive.png"
+              alt=""
+              class="navigation__arrow"
+              width="52px"
+              height="52px"
+            />
           </button>
           <button class="navigation__button">
             <img
               src="./assets/image/button_paginator_inactive (1).png"
               alt=""
+              width="52px"
+              height="52px"
             />
           </button>
           <button class="navigation__button">
-            <img src="./assets/image/button_paginator_active.png" alt="" />
+            <img
+              src="./assets/image/button_paginator_active.png"
+              alt=""
+              width="52px"
+              height="52px"
+            />
           </button>
           <button class="navigation__button">
-            <img src="./assets/image/button_paginator.png" alt="" />
+            <img
+              src="./assets/image/button_paginator.png"
+              alt=""
+              width="52px"
+              height="52px"
+            />
           </button>
           <button class="navigation__button">
-            <img src="./assets/image/button_paginator (1).png" alt="" />
+            <img
+              src="./assets/image/button_paginator (1).png"
+              alt=""
+              width="52px"
+              height="52px"
+            />
           </button>
         </nav>
       </div>
     </section>
-    <footer class="footer">
-      <div class="wrapper">
-        <img src="./assets/image/footer-puppy.png" alt="" class="footer__img" />
+    <footer class="">
+      <div class="wrapper footer">
         <section class="footer__address address">
           <address class="address">
-            <h1 class="address__header">For questions and suggestions</h1>
+            <h1 class="address__header">
+              For questions <br />
+              and suggestions
+            </h1>
             <a href="mailto:email@shelter.com" class="address__link-left"
               ><img
                 src="./assets/image/icon-email.png"
@@ -157,7 +185,10 @@
             </a>
           </address>
           <address class="address">
-            <h1 class="address__header">We are waiting for your visit</h1>
+            <h1 class="address__header">
+              We are waiting <br />
+              for your visit
+            </h1>
             <a href="tel:+13 674 567 75 54" class="address__link-right">
               <img
                 src="./assets/image/icon-marker.png"
@@ -173,6 +204,13 @@
               />18 South Park, London
             </a>
           </address>
+          <picture class="footer__img">
+            <img
+              src="./assets/image/footer-puppy.png"
+              alt=""
+              width="300px"
+              height="310px"
+          /></picture>
         </section>
       </div>
     </footer>
