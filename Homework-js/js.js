@@ -6,11 +6,11 @@
 // const p = 2 * width + 2 * length;
 // let t = "";
 // if (width === length) {
-//   t = "квадрат";
+//   t = " квадрат";
 // } else {
 //   t = "";
 // }
-// console.log(" Площадь=", s, "\n", "Периметр=", p, "\n", t);
+// console.log(` Площадь=${s}\nПериметр= ${p} \n ${t}`);
 
 // 2.  С помощью prompt() спросить у пользователя номер месяца, затем необходимо преобразовать к числу и сохранить в переменную month.
 //  Определите в какую пору года попадает этот месяц (зима, лето, весна, осень). Решите задачу через if/else, а затем придумайте еще один способ решения.
@@ -29,6 +29,18 @@
 // if (month >= 9 && month <= 11) {
 //   p = "осень";
 // }
+// console.log(p);
+
+// const month = Number(prompt("Укажите номер месяца"));
+// let p = "";
+// month === 12 || (month >= 1 && month <= 2)
+//   ? (p = "зима")
+//   : month >= 3 && month <= 5
+//   ? (p = "весна")
+//   : month >= 6 && month <= 8
+//   ? (p = "лето")
+//   : (p = "осень");
+
 // console.log(p);
 
 // const month = Number(prompt("Укажите номер месяца"));
@@ -114,19 +126,21 @@
 // } else {
 //   positive = "отрицательное";
 // }
-// console.log("Число ", even, " ", integer, " ", positive);
+// console.log(`Число ${even} ${integer} ${positive}`);
 
 // Practical task #2 (cycles)
 // Задание:
 // Создаем javascript-сценарий, выполняющий следующие задачи:
 // 1.  Используя цикл while вывести в консоль строку, которая содержит символы “|” (вертикальная полоса) и “_” (нижнее подчеркивание)
 // и выглядит в итоге как треугольник следующего вида:
-
+// const input = "|_";
 // let str = "";
-// while (str.length < 20) {
-//   str = str + "|_";
-//   console.log(str);
+// let i = 0;
+// while (i <= 10) {
+//   str += input.repeat(i) + " \n";
+//   i++;
 // }
+// console.log(str);
 
 // 2. Используя двойной цикл for сформируйте строку, содержащую решётку 8х8, в которой линии разделяются символами новой строки “\n”.
 // На каждой позиции этой решетки должен быть либо белый квадрат (символ “\u2B1C”),
@@ -158,6 +172,31 @@
 // }
 // console.log(str);
 
+// let a = "\u2B1C";
+// let b = "\u2B1B";
+// let c;
+// let str = "";
+
+// for (let i = 0; i < 10; i++) {
+//   if (i % 2 == 0) {
+//     c = a;
+//     a = b;
+//     b = c;
+//   } else {
+//     b = a;
+//     a = c;
+//   }
+//   str += "\n" + "\n";
+//   for (let j = 0; j < 10; j++) {
+//     if (j % 2 != 0) {
+//       str = str + a;
+//     } else {
+//       str = str + b;
+//     }
+//   }
+// }
+// console.log(str);
+
 // Practical task #3 (fizzbuzz)
 
 // Задание:
@@ -172,19 +211,17 @@
 //   let num = 0;
 //   for (let i = a - 1; i < b; i++) {
 //     num = i + 1;
-//     if (num % 3 === 0 && num % 5 === 0) {
-//       num = "fizBuzz";
-//     }
-//     if (num % 3 === 0) {
-//       num = "fizz";
-//     }
-//     if (num % 5 === 0) {
-//       num = "Buzz";
-//     }
-
+//     num % 3 === 0 && num % 5 === 0
+//       ? (num = "fizBuzz")
+//       : num % 3 === 0
+//       ? (num = "fizz")
+//       : num % 5 === 0
+//       ? (num = "Buzz")
+//       : num;
 //     console.log(num);
 //   }
 // }
+
 // fizzBuzz(1, 100);
 
 // Practical task #4 (quadratic)
@@ -213,19 +250,19 @@
 
 // function quadraticEquation(a, b, c) {
 //   let D = b ** 2 - 4 * a * c;
-//   let x1 = "нет корней";
+//   let x1 = `уравнение ${a}x^2+${b}x+${c}=0 не имеет вещественных корней`;
 //   let x2 = "нет корней";
 //   if (D < 0) {
 //     console.log(x1);
 //   }
 //   if (D == 0) {
 //     x1 = -b / (2 * a);
-//     console.log("Корень x=", x1);
+//     console.log(`уравнение ${a}x^2+${b}x+${c}=0 имеет один корень x= ${x1}`);
 //   }
 //   if (D > 0) {
 //     x1 = (-b - Math.sqrt(D)) / (2 * a);
 //     x2 = (-b + Math.sqrt(D)) / (2 * a);
-//     console.log(" Корень x1=", x1, "\n", "Корень x2=", x2);
+//     console.log(`уравнение ${a}x^2+${b}x+${c}=0 имеет корни x1=${x1} и x2=${x2}`);
 //   }
 // }
 // quadraticEquation(4, -8, 1);
@@ -272,217 +309,213 @@
 // }
 // to_binary(10);
 
-// _________________________________________________________________________________________________________
-// Не отправленное на проверку!!!
+// Задание:
+// В папке Task1 создаем файл compression.html, в котором в js-скрипте создаем две функции compress() и uncompress(), которые будут выполнять следующее:
 
-// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
-// function number(str) {
+// Примеры:
+// 1.	Вызов:
+// compress("a");
+// Результат в консоли:
+// “a” => “a”
+// 2.	Вызов:
+// compress("aaa");
+// Результат в консоли:
+// “aaa” => “a3”
+// 3.	Вызов:
+// compress("aabbb");
+// Результат в консоли:
+// “aabbb” => “a2b3”
+// 4.	Вызов:
+// compress("fffdccbbb");
+// Результат в консоли:
+// “fffdccbbb ” => “f3d1c2b3”
+// 5.	Вызов:
+// uncompress("a");
+// Результат в консоли:
+// “a” => “a”
+// 6.	Вызов:
+// uncompress("a5");
+// Результат в консоли:
+// “a5” => “aaaaa”
+// 7.	Вызов:
+// uncompress("a2b3");
+// Результат в консоли:
+// “a2b3” => “aabbb”
+// 8.	Вызов:
+// uncompress("a12b1c3");
+// Результат в консоли:
+// “a12b1c3” => “aaaaaaaaaaaabccc”
+
+// function compress(str) {
 //   let arr = str.split("");
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === "5") {
-//       arr[i - 1] = "0";
-//       arr[i] = "1";
+//   let obj = {};
+//   result = "";
+
+//   arr.map((elem) => {
+//     obj[elem] = obj[elem] + 1 || 1;
+//   });
+
+//   let newArr = Object.entries(obj);
+
+//   newArr.map((elem) => {
+//     result += elem.join("");
+//   });
+//   console.log(`${str}=>${result}`);
+// }
+// compress("aaabb");
+
+// function uncompress(str) {
+//   let arr = str.split("");
+//   let result = "";
+//     for (let i = 0; i < arr.length; i++) {
+//     if (i % 2 == 0) {
+//       result += arr[i].repeat(Number(arr[i + 1]));
 //     }
 //   }
-//   console.log(arr);
+//   console.log(`${str}=>${result}`);
 // }
-// number("23456753");
+// uncompress("a3b2");
 
-// Определите площадь самого большого квадрата, который может поместиться внутри круга радиусом r.
-// function squer(r) {
-//   const a = (2 * r) / Math.sqrt(2);
-//   const s = a * a;
-//   console.log(s);
+// function uncompress(str) {
+//   const arr = str.split("");
+//   let result = "";
+//   arr.forEach((elem, index, array) => {
+//     if (!(index % 2)) {
+//       result += elem.repeat(Number(array[index + 1]));
+//     }
+//   });
+//   console.log(`${str}=>${result}`);
 // }
-// squer(10);
+// uncompress("a3b2");
 
-// Определите общее количество цифр в целом числе (n>=0), заданном в качестве входных данных для функции.
-//  Например, 9 - это одна цифра, 66 состоит из 2 цифр, а 128685 состоит из 6 цифр. Будьте осторожны, чтобы избежать переполнения / недонаполнения.
-// function quantity(number) {
-//   let str = String(number);
-//   const length = str.length;
-//   console.log(length);
+// Задание:
+// В папке Task1 создаем файл countVowels.html и создаем функцию countVowelLetters(), которая будет возвращать количество русских гласных букв в строке, которая будет являться аргументом функции. Не использовать switch, вложенные циклы, регулярные выражения или if’ы на каждую букву для проверок… Можно использовать методы строк, массивы или хеши для решения задачи.
+
+// Пример:
+// 1.	Вызов:
+// countVowelLetters(“Пришла зима, запахло…”);
+// Результат в консоли:
+// Количество гласных = 7
+
+// 2.	Вызов:
+// countVowelLetters(“Ghbdtn, z r dfv bp Hjccbb”);
+// Результат в консоли:
+// Количество гласных = 0
+
+// 3.	Вызов:
+// countVowelLetters(“длинношеее”);
+// Результат в консоли:
+// Количество гласных = 5
+
+// 4.	Вызов:
+// countVowelLetters(“Не будете ли Вы так любезны, Иван, передать мне блокнот и «Известия»”);
+// Результат в консоли:
+// Количество гласных = 23
+
+// 5.	Вызов:
+// countVowelLetters(“Архангел Уриил”);
+// Результат в консоли:
+// Количество гласных = 6
+
+// function countVowelLetters(str) {
+//   const vowels = "ауоыиэяюёе";
+//   let quant = 0;
+//   let pos = -1;
+//   for (let i = 0; i < vowels.length; i++) {
+//     while ((pos = str.indexOf(vowels[i], pos + 1)) != -1) {
+//       quant++;
+//     }
+//   }
+//   return quant
 // }
-// quantity(11000);
+// console.log(countVowelLetters("пришла зима, запахло"));
 
-// Очень просто, учитывая целое число или число с плавающей запятой, найдите его противоположность
-// function opposite(number) {
-//   const res = -number;
-//   console.log(res);
-// }
-// opposite(-12.5);
-
-// Последовательность периметра
-// Показаны первые три этапа последовательности.
-
-// блоки
-
-// Размер блока равен a на a и a ≥ 1.
-
-// Каков периметр n-й фигуры в последовательности (n ≥ 1)?
-
-// function perimetr(n, a) {
-//   const perimetr = 4 * a;
-//   const result = n * perimetr;
-//   console.log(result);
-// }
-// perimetr(5, 10);
-
-// Это довольно просто. Ваша цель - создать функцию, которая удаляет первый и последний символы строки.
-//  Вам дается один параметр, исходная строка. Вам не нужно беспокоиться о строках, содержащих менее двух символов.
-// function remove(str) {
+// function countVowelLetters(str) {
+//   let vowels = "ауоыиэяюёе";
+//   let objVowels = {};
+//   let objStr = {};
+//   let objRes = {};
+//   let arrRes = [];
+//   vowels = vowels.split("");
 //   let arr = str.split("");
-//   arr.pop();
-//   arr.shift();
-//   str = arr.join("");
-
-//   console.log(str);
-// }
-// remove("werrttv rttyy");
-
-// Завершите решение так, чтобы оно возвращало значение true, если переданный первый аргумент (строка) заканчивается 2-м аргументом (также строкой).
-// function end(str1, str2) {
-//   if (
-//     str1.indexOf(str2) != -1 &&
-//     str1[str1.length - 1] === str2[str2.length - 1]
-//   ) {
-//     console.log("true");
-//   } else {
-//     console.log("false");
+//   let quant = 0;
+//   vowels.forEach((elem) => {
+//     objVowels[elem] = objVowels[elem] + 1 || 1;
+//   });
+//   arr.forEach((elem) => {
+//     objStr[elem] = objStr[elem] + 1 || 1;
+//   });
+//   for (key in objVowels) {
+//     objRes[key] = objStr[key];
 //   }
+//   arrRes = Object.values(objRes);
+//   arrRes.forEach((elem) => {
+//     quant += elem || 0;
+//   });
+
+//   return quant;
 // }
-// end("aassdd", "sdd");
+// console.log(countVowelLetters("пришла зима, запахло"));
 
-// Write a function that accepts an integer n and a string s as parameters,
-//  and returns a string of s repeated exactly n times.
-// function repeat(n, s) {
-//   s = s.repeat(n);
-//   console.log(s);
-// }
-// repeat(5, "sse ");
+// Задание:
+// В папке Task2 создаем файл methods.html, в котором реализуем следующий функционал:
+// 1.	На входе имеем массив простых чисел (например, numbers). Нужно описать функцию currentSums(numbers), которая возвращает новый массив из такого же числа элементов, в котором на каждой позиции будет находиться сумма элементов массива numbers до этой позиции включительно. Для решения использовать метод reduce().
+// Т.е. для массива numbers = [2, 3, 5, 7, 11, 13, 17] мы должны увидеть в консоли, вызвав currentSums(numbers):
 
-// function repeat(n, s) {
-//   let str = "";
-//   for (let i = n; i > 0; i--) {
-//     str = str + s;
-//   }
-//   console.log(str);
-// }
-// repeat(3, "sse ");
+// [2, 2+3, 2+3+5, 2+3+5+7, 2+3+5+7+11, 2+3+5+7+11+13, 2+3+5+7+11+13+17] = [2, 5, 10, 17, 28, 41, 58]
 
-// function repeatString(str, count) {
-//   if (count <= 0) return "";
-//   if (count === 1) return str;
-//   else return str + repeatString(str, count - 1);
-// }
-// console.log(repeatString("Строка", 5));
+// function currentSums(numbers) {
+//   let arr = [];
+//   let res = [];
+//   numbers.reduce((sum, elem, i) => {
+//     if (i == 0) {
+//       sum = String(elem);
+//     } else sum = sum + "+" + String(elem);
+//     arr[i] = sum;
+//     return sum;
+//   }, 0);
+//   arr.forEach((element, index) => {
+//     element = element.split("+");
+//     let sums = 0;
+//     element.forEach((element) => {
+//       sums += Number(element) || 0;
+//     });
+//     res[index] = sums;
+//   });
 
-// Если указано число от 0 до 9, верните его прописью.
-
-// Ввод :: 1
-
-// Вывод :: "Один".
-
-// Если ваш язык поддерживает это, попробуйте использовать оператор switch.
-
-// const n = 9;
-// switch (n) {
-//   case 1:
-//     console.log("один");
-//     break;
-//   case 2:
-//     console.log("два");
-//     break;
-//   case 3:
-//     console.log("три");
-//     break;
-//   case 4:
-//     console.log("четыре");
-//     break;
-//   case 5:
-//     console.log("пять");
-//     break;
-//   case 6:
-//     console.log("шесть");
-//     break;
-//   case 7:
-//     console.log("семь");
-//     break;
-//   case 8:
-//     console.log("восемь");
-//     break;
-//   case 9:
-//     console.log("девять");
-//     break;
+//   return `[${arr}] = [${res}]`;
 // }
 
-// Вы пишете код для управления светофорами вашего города. Вам нужна функция для обработки каждого изменения с зеленого на желтый, на красный, а затем снова на зеленый.
+// console.log(currentSums([2, 3, 5, 7, 11, 13, 17]));
 
-// Завершите функцию, которая принимает строку в качестве аргумента, представляющего текущее состояние источника света, и возвращает строку, представляющую состояние, в которое должен перейти источник света.
+// 2.	На входе имеем строку. Напишите функцию firstLettersFromString(), которая получает строку и возвращает новый массив из первых букв слов этой строки. При написании решения используйте метод map().
 
-// Например, когда входной сигнал зеленый, выходной сигнал должен быть желтым.
+// Например:
+// const str = "Каждый охотник желает знать, где сидит фазан.";
+// const newArr = firstLettersFromString(str);
+// console.log(newArr); // [К, о, ж, з, г, с, ф]
 
-// function color(str) {
-//   switch (str) {
-//     case "жёлтый":
-//       console.log("красный");
-//       break;
-//     case "красный":
-//       console.log("зелёный");
-//       break;
-//     case "зелёный":
-//       console.log("желтый");
-//       break;
-//   }
+// function firstLettersFromString(str) {
+//   let arr = str.split(" ");
+//   let res = [];
+//   arr.map((elem, index) => {
+//     elem = elem.split("");
+//     elem.map((elem, i, array) => {
+//       res[index] = array[0];
+//     });
+//   });
+//   return res;
 // }
-// color("жёлтый");
+// console.log(
+//   firstLettersFromString("Каждый охотник желает знать, где сидит фазан.")
+// );
 
-// Вам даны два внутренних угла (в градусах) треугольника.
+// 3.	На входе имеем массив чисел. Напишите функцию, которая получает новый массив, состоящий из всех целых положительных чисел этого массива. При написании решения используйте метод filter().
 
-// Напишите функцию для возврата 3-го числа.
+// Например:
+// const startArray = [-1, 2, 3.5, -12, 4, 1.25, 16];
+// const newArray = filteredArray(startArray);
+// console.log(newArray);  // [2, 4, 16]
 
-// Примечание: будут проверяться только положительные целые числа.
-
-// https://en.wikipedia.org/wiki/Triangle
-
-// function angle(a, b) {
-//   let c = null;
-//   if (a > 0 && b > 0) {
-//     c = 180 - (a + b);
-//   }
-//   console.log(c);
-// }
-// angle(60, 45);
-
-// Каждый день аренды автомобиля стоит 40 долларов. Если вы арендуете автомобиль на 7 или более дней, вы получаете 50 долларов от общей суммы. В качестве альтернативы, если вы арендуете автомобиль на 3 или более дней, вы получаете 20 долларов от общей суммы.
-
-// Напишите код, который выдает общую сумму за разные дни(d).
-// function summ(d) {
-//   let res = d * 40;
-//   if (d >= 3 && d < 7) {
-//     res = res - 20;
-//   }
-//   if (d >= 7) {
-//     res = res - 50;
-//   }
-//   if (d < 3) {
-//     res = res;
-//   }
-//   console.log(res);
-// }
-// summ(3);
-
-// Вы были в походе со своими друзьями далеко от дома, но когда приходит время возвращаться, вы понимаете, что ваше топливо на исходе, а ближайшая заправка находится в 50 милях отсюда! Вы знаете, что в среднем ваш автомобиль расходует около 25 миль на галлон. Осталось 2 галлона.
-
-// Учитывая эти факторы, напишите функцию, которая сообщает вам, возможно ли добраться до насоса или нет.
-
-// Функция должна возвращать значение true, если это возможно, и false, если нет.
-// function rastoya(rast, fuel, consump) {
-//   if (rast <= fuel * consump) {
-//     console.log("true");
-//   } else console.log("false");
-// }
-// rastoya(76, 3, 25);
-
-// _____________________________________________________________
-// Второй блок задач codewars
+const startArray = [-1, 2, 3.5, -12, 4, 1.25, 16];
+const newArray = filter(startArray, function filteredArray(startArray) {});
