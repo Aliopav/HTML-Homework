@@ -517,5 +517,364 @@
 // const newArray = filteredArray(startArray);
 // console.log(newArray);  // [2, 4, 16]
 
-const startArray = [-1, 2, 3.5, -12, 4, 1.25, 16];
-const newArray = filter(startArray, function filteredArray(startArray) {});
+// function filteredArray(startArray) {
+//   let newArray = startArray.filter((elem) =>
+//     elem > 0 && elem % 1 == 0 ? true : false
+//   );
+//   return newArray;
+// }
+// console.log(filteredArray([-1, 2, 3.5, -12, 4, 1.25, 16]));
+
+// const startArray = [-1, 2, 3.5, -12, 4, 1.25, 16];
+// const newArray = startArray.filter((elem) =>
+//   elem > 0 && elem % 1 == 0 ? true : false
+// );
+
+// console.log(newArray);
+
+// 4.	На входе имеем массив значений. Напишите функцию moveZeros(), которая возвращает отсортированный входящий массив, где все нули (0) перемещены в конец этого массива, а остальные элементы остаются в том же порядке. При написании решения используйте метод sort().
+
+// Например:
+// const array1 = [false, 1, 0, NaN, 2, 0, null, 3, 4, 0, 5];
+// const array2 = [0, 2, 0, 4, 0, 6];
+// const array3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// console.log(moveZeros(array1)); //[ false, 1, NaN, 2, null, 3, 4, 5, 0, 0, 0 ]
+// console.log(moveZeros(array2)); //[ 2, 4, 6, 0, 0, 0 ]
+// console.log(moveZeros(array3)); //[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 ]
+
+// const array1 = [false, 1, 0, NaN, 2, 0, null, 3, 4, 0, 5];
+// const array2 = [0, 2, 0, 4, 0, 6];
+// const array3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// function moveZeros(array) {
+//   array.sort((a, b) => {
+//     if (a === 0 || b === 0) {
+//       return b - a;
+//     }
+//   });
+
+//   return array;
+// }
+// console.log(moveZeros(array1));
+
+// 5.	На входе имеем массив чисел. Создать функцию changeArray(), которая будет менять местами половины массивов, т.е. если количество элементов четное, то вторая половина становится сначала массива, а первая на место второй; если количество элементов нечетное, тогда элемент массива, который является серединой остается на месте, а половины меняются местами.
+
+// Например:
+// changeArray([ 1, 2, 3, 4, 5 ]); //[ 4, 5, 3, 1, 2 ]
+// changeArray([ 1, 2 ]); //[ 2, 1 ]
+// changeArray([ 1, 2, 3, 4, 5, 6, 7, 8]);  //[ 5, 6, 7, 8, 1, 2, 3, 4 ]
+
+// function changeArray(array) {
+//   let arr1 = [];
+//   let arr2 = [];
+//   let between = [];
+//   resArr = [];
+//   let index = Math.floor(array.length / 2);
+//   array.forEach((element, i, arr) => {
+//     if (array.length % 2 == 0) {
+//       if (i < index) {
+//         arr1 = arr1.concat(element);
+//       } else arr2 = arr2.concat(element);
+//     } else {
+//       if (i < index) {
+//         arr1 = arr1.concat(element);
+//       }
+//       if (i > index) {
+//         arr2 = arr2.concat(element);
+//       }
+//       if (i == index) {
+//         between = element;
+//       }
+//     }
+//   });
+//   resArr = arr2.concat(between, arr1);
+//   return resArr;
+// }
+// console.log(changeArray([1, 2, 3, 4, 5]));
+
+// Задание:
+// В папке Task2 создаем файл buttons-counter.html, в котором верстаем три кнопки, стилизуем их на свой вкус,
+// создаем обработчик кликов (достаточно будет просто метода btn.onclick = function(){} для кнопок и считаем количество этих кликов по каждой кнопке,
+//  выводя результат в саму кнопку, т.е. как текстовое значение кнопки. Количество нажатий для каждой кнопки должно хранится в замыкании
+//   и ничего не знать про саму кнопку (никаких this, textContent, innerText или innerHTML в самой функции и она должна только возвращать измененное значение счетчика),
+//    т.е. должна быть только одна функция подсчета кликов, но использоваться для любого количества кнопок (подразумевается, что кнопок может быть как одна, так и пара сотен...).
+
+// const button = document.querySelector(".button");
+// const span = document.createElement("span");
+// [...button.children].forEach((item) => {
+//   item.addEventListener("click", function () {
+//     item.innerText = +item.innerText + 1;
+//   });
+// });
+// console.log(button);
+
+// Задание:
+// В папке Task2 создаем файл pow-and-calculate.html и реализуем функции, которые будут использовать понятие замыкание и каррирование и удовлетворять условиям:
+// 1.	возводить в степень число, а вызываться будет как pow(x)(y);
+// 2.	Не использовать метод Math.pow() или x**y;
+// 3.	Желательно сделать с помощью рекурсии функцию pow(x)(y);
+// 4.	суммировать числа и выводить результат, а вызываться как calculate(a)(“+”)(b); или calculate(a)(“-”)(b); (возможные операции - "+",  "-", "/", "*");
+// *eval() использовать запрещено!
+
+// function pow(x) {
+//   return function (y) {
+//     return x ** y;
+//   };
+// }
+// console.log(pow(2)(3));
+
+// function calculate(a) {
+//   return function (oper) {
+//     return function (b) {
+//       switch (oper) {
+//         case "-":
+//           return a - b;
+
+//         case "+":
+//           return a + b;
+//         case "*":
+//           return a * b;
+//         case "/":
+//           return b == 0 ? "На 0 делить нельзя" : a / b;
+//       }
+//     };
+//   };
+// }
+// console.log(calculate(3)("/")(0));
+
+// let res = function test() {
+//   let num = 1;
+
+//   return function () {
+//     console.log(num);
+//     num++;
+//   };
+// };
+// res()();
+// res()();
+
+// function each(arr, callback) {
+//   let res = [];
+//   arr.forEach((elem) => {
+//     res.push(callback(elem));
+//   });
+//   return res;
+// }
+
+// let result = each([1, 2, 3, 4], cube);
+// console.log(result);
+
+// function cube(num) {
+//   return num ** 3;
+// }
+
+// Выведите на экран текущую дату-время в формате 12:59:59 31.12.2014.
+//  Используйте для всех частей даты (кроме года) созданную нами функцию для добавления нуля при необходимости.
+// let date = new Date();
+// function addZero(num) {
+//   return num > 0 && num <= 9 ? "0" + num : num;
+// }
+// console.log(
+//   `${date.getHours()}:${date.getMinutes()}:${addZero(
+//     date.getSeconds()
+//   )} ${addZero(date.getDate())}.${addZero(
+//     date.getMonth() + 1
+//   )}.${date.getFullYear()}`
+// );
+// let day = date.getDay();
+// let days = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+// console.log(days[day]);
+
+// Оформите этот способ решения проблемы в виде функции,
+//  которая параметрами будет принимать месяц и год и возвращать номер последнего дня этого месяца.
+// function showLastDay(year, month) {
+//   let date = new Date(year, month, 0);
+//   let lastDay = date.getDate();
+//   console.log(lastDay);
+// }
+
+// showLastDay(2020, 02);
+
+// let elem = document.querySelector("#elem");
+// let paragraph = document.querySelector(".paragraph");
+// let link = document.querySelector(".link");
+// elem.addEventListener("click", function () {
+//   link.textContent = `${link.textContent} (${link.href})`;
+// });
+// let img = document.createElement("img");
+// img.src = "./football.jpg";
+// img.width = 300 'px';
+// console.log(img);
+
+// const root = document.querySelector("#root");
+// const year = 2022;
+// const month = 12;
+// const daysOfMonth = new Date(year, month, 0).getDate();
+// console.log(daysOfMonth);
+// const amountWeek = Math.ceil(daysOfMonth / 7);
+// let firstDay = new Date(year, month, 1).getDay();
+// firstDay = firstDay == 0 ? 6 : firstDay - 1;
+// const calendar = new Array(amountWeek).fill([]).map((elem, index) => {
+//   const arr = [];
+//   for (let i = 1; i <= 7; i++) {
+//     const dayValue = i + index * 7;
+//     if (i > firstDay && index == 0) {
+//       arr.push(dayValue - firstDay);
+//     } else if (dayValue <= daysOfMonth && index > 0) {
+//       arr.push(dayValue);
+//     } else {
+//       arr.push("");
+//     }
+//   }
+//   return arr;
+// });
+
+// console.log(calendar);
+// const tbody = document.createElement("tbody");
+// calendar.forEach((elem) => {
+//   const tr = document.createElement("tr");
+//   const td = elem.map((elem) => {
+//     const htmlTd = document.createElement("td");
+//     htmlTd.innerText = elem;
+//     return htmlTd;
+//   });
+//   tr.append(...td);
+//   tbody.append(tr);
+// });
+// console.log(tbody);
+// root.append(tbody);
+
+const root = document.querySelector("#root");
+const year = prompt("введите год рождения");
+const monthName = prompt("введите название месяца").toLowerCase();
+
+switch (monthName) {
+  case "январь":
+    month = 1;
+    break;
+  case "февраль":
+    month = 2;
+    break;
+  case "март":
+    month = 3;
+    break;
+  case "апрель":
+    month = 4;
+    break;
+  case "май":
+    month = 5;
+    break;
+  case "июнь":
+    month = 6;
+    break;
+  case "июль":
+    month = 7;
+    break;
+  case "август":
+    month = 8;
+    break;
+  case "сентябрь":
+    month = 9;
+    break;
+  case "октябрь":
+    month = 10;
+    break;
+  case "ноябрь":
+    month = 11;
+    break;
+  case "декабрь":
+    month = 12;
+    break;
+}
+const daysOfMonth = new Date(year, month, 0).getDate();
+
+let firstDay = new Date(year, month - 1, 1).getDay();
+firstDay = firstDay == 0 ? 6 : firstDay - 1;
+
+const amountWeek = 5 + (firstDay >= 5 ? 1 : 0);
+let dayValue = 1;
+const calendar = new Array(amountWeek).fill([]).map((elem, index, array) => {
+  const arr = [];
+  // создать массивы с иднексом от 0 до 6
+  // первый массив начинать с индекса firstday, до него пустые строки
+
+  for (let i = 0; i <= 6; i++) {
+    if (index == 0 && i < firstDay) {
+      arr.push("");
+    } else if (index == 0 && i >= firstDay) {
+      arr.push(dayValue);
+      dayValue++;
+
+      // как сохранить dayValue, чтобы выходя из цикла сохранялось - выносим присвоение до цикла.
+    } else if (index != 0) {
+      arr.push(dayValue);
+      dayValue++;
+    }
+    if (dayValue > daysOfMonth + 1) {
+      arr.pop();
+      arr.push("");
+    }
+  }
+
+  return arr;
+});
+console.log(calendar);
+
+const tbody = document.createElement("tbody");
+calendar.forEach((elem) => {
+  const tr = document.createElement("tr");
+  const td = elem.map((elem) => {
+    const htmlTd = document.createElement("td");
+    htmlTd.innerText = elem;
+    return htmlTd;
+  });
+  tr.append(...td);
+  tbody.append(tr);
+});
+console.log(tbody);
+root.append(tbody);
+
+const td = document.getElementsByTagName("td");
+const length = td.length;
+console.log(length);
+for (let i = 0; i < length; i++) {
+  td[i].classList.add("green");
+}
+let trWeekday = document.createElement("tr");
+
+tbody.prepend(trWeekday);
+
+for (let i = 0; i < 7; i++) {
+  const tdWeekday = document.createElement("td");
+  trWeekday.append(tdWeekday);
+  tdWeekday.classList.add("green");
+  switch (i) {
+    case 0:
+      tdWeekday.innerText = "пн";
+      break;
+    case 1:
+      tdWeekday.innerText = "вт";
+      break;
+    case 2:
+      tdWeekday.innerText = "ср";
+      break;
+    case 3:
+      tdWeekday.innerText = "чт";
+      break;
+    case 4:
+      tdWeekday.innerText = "пт";
+      break;
+    case 5:
+      tdWeekday.innerText = "сб";
+      break;
+    case 6:
+      tdWeekday.innerText = "вс";
+      break;
+  }
+}
+const p1 = document.createElement("p");
+const p2 = document.createElement("p");
+p1.innerText = `${year} год `;
+p2.innerText = `${monthName} месяц`;
+root.prepend(p2);
+root.prepend(p1);

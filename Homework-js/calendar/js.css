@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+button {
+  cursor: pointer;
+  width: 100px;
+}
+.green {
+  border: 2px solid green;
+  text-align: center;
+
+  width: 30px;
+  height: 30px;
+}
