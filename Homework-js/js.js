@@ -744,137 +744,217 @@
 // console.log(tbody);
 // root.append(tbody);
 
-const root = document.querySelector("#root");
-const year = prompt("введите год рождения");
-const monthName = prompt("введите название месяца").toLowerCase();
+// const root = document.querySelector("#root");
+// let year = 2014;
+// const monthName = "май".toLowerCase();
 
-switch (monthName) {
-  case "январь":
-    month = 1;
-    break;
-  case "февраль":
-    month = 2;
-    break;
-  case "март":
-    month = 3;
-    break;
-  case "апрель":
-    month = 4;
-    break;
-  case "май":
-    month = 5;
-    break;
-  case "июнь":
-    month = 6;
-    break;
-  case "июль":
-    month = 7;
-    break;
-  case "август":
-    month = 8;
-    break;
-  case "сентябрь":
-    month = 9;
-    break;
-  case "октябрь":
-    month = 10;
-    break;
-  case "ноябрь":
-    month = 11;
-    break;
-  case "декабрь":
-    month = 12;
-    break;
-}
-const daysOfMonth = new Date(year, month, 0).getDate();
+// const monthNames = [
+//   "январь",
+//   "февраль",
+//   "март",
+//   "апрель",
+//   "май",
+//   "июнь",
+//   "июль",
+//   "август",
+//   "сентябрь",
+//   "октябрь",
+//   "ноябрь",
+//   "декабрь",
+// ];
+// let month = monthNames.indexOf(monthName) + 1;
 
-let firstDay = new Date(year, month - 1, 1).getDay();
-firstDay = firstDay == 0 ? 6 : firstDay - 1;
+// const p1 = document.createElement("p");
+// const p2 = document.createElement("p");
+// p1.innerText = `${year} г `;
+// p2.innerText = `${monthName}`;
+// const yearAndMonth = document.createElement("div");
+// yearAndMonth.classList.add("yearAndMonth");
+// root.prepend(yearAndMonth);
+// const leftArrowOne = document.createElement("button");
+// const leftArrowTwo = document.createElement("button");
+// const rightArrowOne = document.createElement("button");
+// const rightArrowTwo = document.createElement("button");
+// rightArrowTwo.innerText = ">>";
+// rightArrowOne.innerText = ">";
+// leftArrowTwo.innerText = "<<";
+// leftArrowOne.innerText = "<";
+// leftArrowOne.type = "submit";
+// leftArrowOne.classList = "leftArrowOne";
+// yearAndMonth.append(
+//   leftArrowTwo,
+//   leftArrowOne,
+//   p2,
+//   p1,
+//   rightArrowOne,
+//   rightArrowTwo
+// );
 
-const amountWeek = 5 + (firstDay >= 5 ? 1 : 0);
-let dayValue = 1;
-const calendar = new Array(amountWeek).fill([]).map((elem, index, array) => {
-  const arr = [];
-  // создать массивы с иднексом от 0 до 6
-  // первый массив начинать с индекса firstday, до него пустые строки
+// const weekDay = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+// const weekDayElements = weekDay.map((elem) => {
+//   const tdWeekday = document.createElement("th");
+//   tdWeekday.classList.add("weekday");
+//   tdWeekday.innerText = elem;
+//   return tdWeekday;
+// });
+// const table = document.createElement("table");
+// const thead = document.createElement("thead");
+// const trWeekday = document.createElement("tr");
+// const tbody = document.createElement("tbody");
 
-  for (let i = 0; i <= 6; i++) {
-    if (index == 0 && i < firstDay) {
-      arr.push("");
-    } else if (index == 0 && i >= firstDay) {
-      arr.push(dayValue);
-      dayValue++;
+// trWeekday.append(...weekDayElements);
+// thead.append(trWeekday);
 
-      // как сохранить dayValue, чтобы выходя из цикла сохранялось - выносим присвоение до цикла.
-    } else if (index != 0) {
-      arr.push(dayValue);
-      dayValue++;
+// table.append(thead, tbody);
+
+// root.append(table);
+
+// function creatCalendar(year, month) {
+//   const daysOfMonth = new Date(year, month, 0).getDate();
+
+//   let firstDay = new Date(year, month - 1, 1).getDay();
+//   firstDay = firstDay == 0 ? 6 : firstDay - 1;
+
+//   const amountWeek = 5 + (firstDay >= 5 ? 1 : 0);
+//   let dayValue = 1;
+//   const calendar = new Array(amountWeek).fill([]).map((elem, index, array) => {
+//     const arr = [];
+//     // создать массивы с иднексом от 0 до 6
+//     // первый массив начинать с индекса firstday, до него пустые строки
+
+//     for (let i = 0; i <= 6; i++) {
+//       if (index == 0 && i < firstDay) {
+//         arr.push("");
+//       } else if (index == 0 && i >= firstDay) {
+//         arr.push(dayValue);
+//         dayValue++;
+
+//         // как сохранить dayValue, чтобы выходя из цикла сохранялось - выносим присвоение до цикла.
+//       } else if (index != 0) {
+//         arr.push(dayValue);
+//         dayValue++;
+//       }
+//       if (dayValue > daysOfMonth + 1) {
+//         arr.pop();
+//         arr.push("");
+//       }
+//     }
+
+//     return arr;
+//   });
+
+//   calendar.forEach((elem) => {
+//     const tr = document.createElement("tr");
+//     const td = elem.map((elem) => {
+//       const htmlTd = document.createElement("td");
+//       htmlTd.innerText = elem;
+//       htmlTd.classList.add("green");
+//       return htmlTd;
+//     });
+//     tr.append(...td);
+//     tbody.append(tr);
+//   });
+// }
+
+// creatCalendar(year, month);
+
+// leftArrowOne.addEventListener("click", function () {
+//   if (month == 1) {
+//     month = 12;
+//     year = year - 1;
+//   } else {
+//     month = month - 1;
+//   }
+
+//   p1.innerText = `${year} г `;
+//   p2.innerText = monthNames[month - 1];
+//   tbody.innerHTML = "";
+
+//   creatCalendar(year, month);
+// });
+
+// leftArrowTwo.addEventListener("click", function () {
+//   year = year - 1;
+//   p1.innerText = `${year} г `;
+//   tbody.innerHTML = "";
+//   creatCalendar(year, month);
+// });
+
+// rightArrowOne.addEventListener("click", function () {
+//   if (month == 12) {
+//     month = 1;
+//     year = year + 1;
+//   } else {
+//     month = month + 1;
+//   }
+
+//   p1.innerText = `${year} г `;
+//   p2.innerText = monthNames[month - 1];
+//   tbody.innerHTML = "";
+
+//   creatCalendar(year, month);
+// });
+
+// rightArrowTwo.addEventListener("click", function () {
+//   year = year + 1;
+//   p1.innerText = `${year} г `;
+//   tbody.innerHTML = "";
+//   creatCalendar(year, month);
+// });
+
+// Задание:
+// В папке Task2 создаем файл method-counter.html, в котором реализуем ф-цию getCounter,
+// которая использует аргумент, как начальное значение (если аргумент не был передан,
+//    то начальное значение равно 0) и возвращает объект, содержащий методы log, count и reset,
+//    работающие со значением и выполняющие в итоге следующий код:
+
+//   const counter = getCounter(5);
+//   counter.log() // 5
+//   .count(4)
+//   .log() // 9
+//   .count(3)
+//   .log() // 12
+//   .reset()
+//   .log() // 0
+//   .count(8)
+//   .log(); // 8
+
+// function getCounter(value = 0) {
+//   return {
+//     value: value,
+//     log: function () {
+//       console.log(this.value);
+//       return this;
+//     },
+//     count: function (x) {
+//       this.value = this.value + x;
+//       return this;
+//     },
+//     reset: function () {
+//       this.value = 0;
+//       return this;
+//     },
+//   };
+// }
+// const counter = getCounter(5);
+
+// counter.log();
+
+// 24)
+// Дан массив чисел. Необходимо отсортировать нечетные числа в порядке возрастания,
+//  оставив четные числа на их исходных позициях.
+
+// Примеры:
+// [7, 1]  =>  [1, 7]
+// [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]
+// [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
+
+function nechet(arr) {
+  arr.sort(function (a, b) {
+    if (a % 2 != 0 && b % 2 != 0) {
+      return a - b;
     }
-    if (dayValue > daysOfMonth + 1) {
-      arr.pop();
-      arr.push("");
-    }
-  }
-
-  return arr;
-});
-console.log(calendar);
-
-const tbody = document.createElement("tbody");
-calendar.forEach((elem) => {
-  const tr = document.createElement("tr");
-  const td = elem.map((elem) => {
-    const htmlTd = document.createElement("td");
-    htmlTd.innerText = elem;
-    return htmlTd;
   });
-  tr.append(...td);
-  tbody.append(tr);
-});
-console.log(tbody);
-root.append(tbody);
-
-const td = document.getElementsByTagName("td");
-const length = td.length;
-console.log(length);
-for (let i = 0; i < length; i++) {
-  td[i].classList.add("green");
+  return arr;
 }
-let trWeekday = document.createElement("tr");
-
-tbody.prepend(trWeekday);
-
-for (let i = 0; i < 7; i++) {
-  const tdWeekday = document.createElement("td");
-  trWeekday.append(tdWeekday);
-  tdWeekday.classList.add("green");
-  switch (i) {
-    case 0:
-      tdWeekday.innerText = "пн";
-      break;
-    case 1:
-      tdWeekday.innerText = "вт";
-      break;
-    case 2:
-      tdWeekday.innerText = "ср";
-      break;
-    case 3:
-      tdWeekday.innerText = "чт";
-      break;
-    case 4:
-      tdWeekday.innerText = "пт";
-      break;
-    case 5:
-      tdWeekday.innerText = "сб";
-      break;
-    case 6:
-      tdWeekday.innerText = "вс";
-      break;
-  }
-}
-const p1 = document.createElement("p");
-const p2 = document.createElement("p");
-p1.innerText = `${year} год `;
-p2.innerText = `${monthName} месяц`;
-root.prepend(p2);
-root.prepend(p1);
+console.log(nechet([5, 8, 6, 3, 4]));
