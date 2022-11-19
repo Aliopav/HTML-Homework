@@ -1,0 +1,9 @@
+.text {
+  margin-top: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section header {
+  text-decoration: underline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
